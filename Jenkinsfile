@@ -13,6 +13,12 @@ pipeline{
         git branch: 'dev', url: 'https://github.com/Harikrushn96/mavenproject.git'
       }
     }
+    stage("build")
+    {
+      steps{
+        bat "mvn clean install"
+      }
+    }
   }
 }
     
